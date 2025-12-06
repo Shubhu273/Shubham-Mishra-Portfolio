@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Manojkumar Mishra - Freelance Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="hero">
+        <div class="container">
+            <img src="PHOTOIBM.jpeg" alt="Profile Picture of Shubham Manojkumar Mishra" id="profile-pic">
+            <h1>Shubham Manojkumar Mishra</h1>
+            <p>Freelance Website Developer | Python Developer | App Developer</p>
+            <p>Building innovative web apps, Python scripts, and mobile solutions. Let's create something amazing together!</p>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Shubham Manojkumar Mishra, a passionate freelancer with expertise in full-stack web development, Python programming, and cross-platform app development. I love turning ideas into functional, user-friendly products. With years of experience, I've helped clients from startups to enterprises achieve their goals.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React, Node.js</p>
+                </div>
+                <div class="skill">
+                    <h3>Python Development</h3>
+                    <p>Django, Flask, Data Analysis, Automation</p>
+                </div>
+                <div class="skill">
+                    <h3>App Development</h3>
+                    <p>React Native, Flutter, iOS/Android</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project" onclick="openModal('Restaurant Table and Food Booking System App', 'A mobile app for reserving tables and ordering food online, built with Flutter for seamless user experience and real-time updates.')">
+                    <h3>Restaurant Table and Food Booking System App</h3>
+                    <p>Streamlined booking and ordering for restaurants.</p>
+                </div>
+                <div class="project" onclick="openModal('Disease Prediction using Machine Learning App', 'An app that predicts diseases based on symptoms using machine learning models in Python, integrated with a user-friendly interface.')">
+                    <h3>Disease Prediction using Machine Learning App</h3>
+                    <p>AI-powered health predictions for early diagnosis.</p>
+                </div>
+                <div class="project" onclick="openModal('Wedding Website', 'A custom wedding website with RSVP, photo gallery, and event details, developed using HTML, CSS, and JavaScript for a personalized touch.')">
+                    <h3>Wedding Website</h3>
+                    <p>Elegant site for wedding planning and guest management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Or reach me directly at: <strong>7738812664</strong> | <a href="mailto:shubhamkalyan2004@gmail.com" style="color: #00ff00;">shubhamkalyan2004@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
