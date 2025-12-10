@@ -24,7 +24,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 });
 
 // Smooth Scrolling for Navigation
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('#navMenu a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
@@ -32,7 +32,28 @@ document.querySelectorAll('nav a').forEach(anchor => {
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
+        // Close menu after clicking
+        toggleMenu();
     });
+});
+
+// Menu Toggle Functionality
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+}
+
+menuToggle.addEventListener('click', toggleMenu);
+
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && !document.querySelector('.menu-container').contains(e.target)) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 });
 
 // Scroll to Top
